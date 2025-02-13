@@ -17,14 +17,12 @@ package org.amix.ext
  *   along with Amix.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import android.os.Process
-import android.util.Log
 import java.io.PrintWriter
 import java.io.StringWriter
 import java.io.Writer
 
 /**
- * Function to get the stack trace.
+ * Function to get the stack trace as a String.
  */
 fun Throwable?.getStackTrace(): String {
   val result: Writer = StringWriter()
