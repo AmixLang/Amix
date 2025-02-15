@@ -22,7 +22,7 @@ import org.antlr.v4.runtime.CommonTokenStream
 import org.antlr.v4.runtime.atn.PredictionMode
 import org.antlr.v4.runtime.tree.ParseTreeWalker
 import org.amix.compiler.listener.AmixParserListener
-import org.amix.ext.getStackTrace
+import org.amix.ext.getStackTraceStr
 import org.amix.internal.antlr4.AmixLexer
 import org.amix.internal.antlr4.AmixParser
 import org.amix.xml.AmixXmlGenerator
@@ -51,7 +51,7 @@ class AmixCompiler(private val xmlGenerator: AmixXmlGenerator, private val code:
         val walker = ParseTreeWalker.DEFAULT
         walker.walk(compiler, compilationUnitContext)
       } catch (e: Exception) {
-        xmlGenerator.onError(e.getStackTrace())
+        xmlGenerator.onError(e.getStackTraceStr())
       }
     }
     th.priority = Thread.MIN_PRIORITY
