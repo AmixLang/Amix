@@ -1,4 +1,4 @@
-package org.amix.compiler
+package org.amix.annotation
 
 /*
  * Copyright 2025 Amix.
@@ -16,4 +16,9 @@ package org.amix.compiler
  * limitations under the License.
  */
 
-class AmixNullCodeException() : Exception("Amix Code cannot be null.")
+/**
+ * Marks experimental API in Amix. An experimental API can be changed or removed at any time.
+ */
+@RequiresOptIn(level = RequiresOptIn.Level.WARNING)
+@Retention(AnnotationRetention.BINARY)
+annotation class ExperimentalAmixApi
