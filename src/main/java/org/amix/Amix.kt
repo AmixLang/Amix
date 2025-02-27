@@ -17,7 +17,7 @@ package org.amix
  */
 
 import org.amix.compiler.AmixCompiler
-import org.amix.config.Config
+import org.amix.robok.Config
 import org.amix.xml.AmixXmlGenerator
 
 class Amix {

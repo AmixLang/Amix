@@ -1,4 +1,4 @@
-package org.amix.annotation
+package org.amix.robok
 
 /*
  * Copyright 2025 Amix.
@@ -16,9 +16,12 @@ package org.amix.annotation
  * limitations under the License.
  */
 
-/**
- * Marks experimental API in Amix. An experimental API can be changed or removed at any time.
- */
-@RequiresOptIn(level = RequiresOptIn.Level.WARNING)
-@Retention(AnnotationRetention.BINARY)
-annotation class ExperimentalAmixApi
+import java.io.Serializable
+import org.amix.annotation.RobokApi
+
+@RobokApi
+data class Config(val orientation: String, val style: String) : Serializable {
+  companion object {
+    fun getName(): String = "config"
+  }
+}

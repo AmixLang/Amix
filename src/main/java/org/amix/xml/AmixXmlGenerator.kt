@@ -18,7 +18,6 @@ package org.amix.xml
 
 import java.lang.reflect.InvocationTargetException
 import org.amix.components.Components
-import org.amix.config.Config
 import org.amix.converter.AttributeConverter
 import org.amix.ext.newLine
 import org.amix.ext.newLineBroken
@@ -27,7 +26,6 @@ import org.amix.internal.Utils.comment
 /*
  * Class that generates XML from the received data.
  */
-
 class AmixXmlGenerator(
   private val onGenerateCode: (String, Config) -> Unit,
   val onError: (String) -> Unit,
@@ -43,11 +41,8 @@ class AmixXmlGenerator(
   private var style = "defaultStyle"
   private var isConfigEnable = false
 
-  private var components = Components(
-    useComments = useComments,
-    useStyle = useStyle,
-    useVerticalRoot = useVerticalRoot
-  )
+  private var components =
+    Components(useComments = useComments, useStyle = useStyle, useVerticalRoot = useVerticalRoot)
 
   init {
     components.Root()

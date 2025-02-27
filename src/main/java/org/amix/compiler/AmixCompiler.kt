@@ -16,21 +16,19 @@ package org.amix.compiler
  * limitations under the License.
  */
 
-import org.antlr.v4.runtime.CharStreams
-import org.antlr.v4.runtime.CommonTokenStream
-import org.antlr.v4.runtime.atn.PredictionMode
-import org.antlr.v4.runtime.tree.ParseTreeWalker
 import org.amix.compiler.listener.AmixParserListener
 import org.amix.ext.getStackTraceStr
 import org.amix.internal.antlr4.AmixLexer
 import org.amix.internal.antlr4.AmixParser
 import org.amix.xml.AmixXmlGenerator
+import org.antlr.v4.runtime.CharStreams
+import org.antlr.v4.runtime.CommonTokenStream
+import org.antlr.v4.runtime.atn.PredictionMode
+import org.antlr.v4.runtime.tree.ParseTreeWalker
 
 /*
  * Class that uses ANTLR4 to compile the Code and use { @link AmixParserListener }.
- * @author Thiarley Rocha (ThDev-only).
  */
-
 class AmixCompiler(private val xmlGenerator: AmixXmlGenerator, private val code: String?) {
 
   fun compile() {

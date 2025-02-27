@@ -17,7 +17,7 @@ package org.amix.components
  */
 
 import org.amix.annotation.Component
-import org.amix.config.Config
+import org.amix.robok.Config
 import org.amix.ext.newLine
 import org.amix.ext.newLineBroken
 import org.amix.internal.AttributeDefaults
@@ -26,7 +26,7 @@ import org.amix.internal.Utils.convertStyleToFileName
 
 internal class Components(
   private val useComments: Boolean = false,
-  private val useStyle: Boolean = false, 
+  private val useStyle: Boolean = false,
   private val useVerticalRoot: Boolean = false,
 ) {
 

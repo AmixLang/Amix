@@ -20,9 +20,7 @@ import java.io.PrintWriter
 import java.io.StringWriter
 import java.io.Writer
 
-/**
- * Function to get the stack trace as a String.
- */
+/** Function to get the stack trace as a String. */
 fun Throwable?.getStackTraceStr(): String {
   val result: Writer = StringWriter()
   PrintWriter(result).use { printWriter ->
