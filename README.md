@@ -49,13 +49,11 @@ Available Config's:
 
 ```kotlin
 fun main(vararg args: String) {
-  val context: Context = /* Obtain your Context, ex:  from an Activity or Application */
-  
-  val amix = Amix.Builder(context)
+  val amix = Amix.Builder()
     .setUseStyle(false) // Enable style in Components, (will add a tag in  componnets to use Robok components, like background
     .setUseVerticalRoot(false) // Use orientation vertical in root view if true
     .setUseComments(false) // Enable comments in xml code (not recommended)
-    .setCode("<example-code>") // some amix code
+    .setCode("Your Amix Code") // your amix code to be compiled
     .setOnGenerateCode { generatedCode, config ->
       // here you can do something with your generated Android Views XML Layout code
     }
@@ -64,6 +62,6 @@ fun main(vararg args: String) {
       println("Error: $errorMessage")
     }
     .create()
-    amix.compile() // compile the code
+  amix.compile() // compile the code
 }
 ```
