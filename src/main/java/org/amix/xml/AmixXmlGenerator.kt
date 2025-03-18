@@ -21,6 +21,7 @@ import org.amix.components.Components
 import org.amix.converter.AttributeConverter
 import org.amix.ext.newLine
 import org.amix.ext.newLineBroken
+import org.amix.robok.Config
 import org.amix.internal.Utils.comment
 
 /*
